@@ -29,6 +29,7 @@ const ProfileHeader = () => {
               px: 2,
               py: 0.5,
               fontSize: 12,
+              width: "fit-content",
               border: "1px solid #2E90FA",
             }}
           >

@@ -57,7 +57,6 @@ export const ProjectPaymentsList = ({ title, proposals, list }) => {
                   py: 1,
                 }}
               >
-                {/* Left Section: Icon + Name + Client */}
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   {proposals && (
                     <ListItemIcon sx={{ minWidth: 36 }}>
@@ -79,7 +78,6 @@ export const ProjectPaymentsList = ({ title, proposals, list }) => {
                   />
                 </Box>
 
-                {/* Right Section: Amount */}
                 {!proposals && (
                   <Box sx={{ minWidth: "80px", textAlign: "right" }}>
                     <Typography sx={{ color: "#D92D20" }}>

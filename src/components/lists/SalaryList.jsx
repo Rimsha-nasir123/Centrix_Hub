@@ -66,11 +66,7 @@ const SalaryStatementList = () => {
                     Net Pay
                   </Typography>
                 </Grid>
-                <Box
-                  display="flex"
-                  justifyContent={{ xs: "start", md: "end" }}
-                  gap={1}
-                >
+                <Box display="flex" justifyContent={"center"} gap={1}>
                   <Box
                     sx={{
                       bgcolor: "#ECFDF3",
@@ -81,6 +77,8 @@ const SalaryStatementList = () => {
                       px: 2,
                       fontSize: 12,
                       border: "1px solid #AAEFC6",
+                      width: "fit-content",
+                      height: 30,
                     }}
                   >
                     <CheckOutlined fontSize="small" />
