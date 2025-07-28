@@ -3,16 +3,19 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
-import {
-  Avatar,
-  ListItemIcon,
-  Paper,
-  Typography,
-} from "@mui/material";
-import { useState } from "react";
+import { Avatar, ListItemIcon, Paper, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Sidebar = ({ listItems }) => {
+export const Sidebar = ({ listItems, activeNav }) => {
   const [active, setActive] = useState("Dashboard");
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (activeNav === 2) {
+      setActive("Profile");
+    }
+  }, [listItems]);
+
   return (
     <List
       sx={{
@@ -25,12 +28,14 @@ export const Sidebar = ({ listItems }) => {
         component="img"
         src="/logo.svg"
         alt="Logo"
+        onClick={() => navigate("/profile")}
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-center",
           px: 5,
           py: 2,
+          cursor: "pointer",
         }}
       />
       {listItems.map((item, index) => (

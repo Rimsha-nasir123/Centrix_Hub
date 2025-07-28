@@ -28,7 +28,7 @@ export const ProfileLayout = ({ children }) => {
   ];
   return (
     <Box sx={{ display: "flex", height: "100vh", m: 0, p: 0 }}>
-      <Sidebar listItems={listItems} />
+      <Sidebar listItems={listItems} activeNav={2}/>
       <Box
         component="main"
         sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}

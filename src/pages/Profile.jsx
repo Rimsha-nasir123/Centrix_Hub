@@ -9,7 +9,7 @@ const ProfilePage = () => {
   return (
     <ProfileLayout>
       <Box>
-        <Typography variant="h6" fontWeight={500} sx={{ px: 3, pt: 3 }}>
+        <Typography variant="h6" fontWeight={500} sx={{ px: 2, pb: 3 }}>
           My Profile
         </Typography>
         <Box elevation={0}>

@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Paper, Typography } from "@mui/material";
+import { Box, Card, Grid, Typography } from "@mui/material";
 import { SimpleButton } from "../button/Index";
 import FolderOutlinedIcon from "@mui/icons-material/FolderOutlined";
 
@@ -26,7 +26,7 @@ const StatsCards = () => {
   return (
     <Grid container spacing={2} marginBottom={8}>
       {statsCard?.map((item, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
+        <Grid key={index}>
           <Card
             variant="outlined"
             sx={{ p: 2, borderRadius: 2, height: "100%" }}
