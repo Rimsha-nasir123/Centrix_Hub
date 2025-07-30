@@ -86,7 +86,7 @@ const ProjectsReport = () => {
         <Typography
           variant="h5"
           component="h2"
-          sx={{ fontWeight: 600, fontSize: 16 }}
+          sx={{ fontWeight: 600, fontSize: 18 }}
         >
           Projects report
         </Typography>

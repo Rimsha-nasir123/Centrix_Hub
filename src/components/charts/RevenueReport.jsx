@@ -64,7 +64,7 @@ const RevenueReport = ({ profile }) => {
             variant="h5"
             component="h2"
             gutterBottom
-            sx={{ fontWeight: 600, fontSize: 16 }}
+            sx={{ fontWeight: 600, fontSize: 18 }}
           >
             Revenue report
           </Typography>

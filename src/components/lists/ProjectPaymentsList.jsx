@@ -28,6 +28,8 @@ export const ProjectPaymentsList = ({ title, proposals, list }) => {
           alignItems: "center",
           justifyItems: "space-between",
           justifyContent: "space-between",
+          fontWeight: 600,
+          fontSize: 18,
         }}
       >
         {title}
@@ -74,13 +76,15 @@ export const ProjectPaymentsList = ({ title, proposals, list }) => {
                   <ListItemText
                     primary={item?.name}
                     secondary={item?.client}
+                    fontSize={14}
+                    fontWeight={400}
                     sx={{ ml: 1 }}
                   />
                 </Box>
 
                 {!proposals && (
                   <Box sx={{ minWidth: "80px", textAlign: "right" }}>
-                    <Typography sx={{ color: "#D92D20" }}>
+                    <Typography fontSize={14} fontWeight={400} color="#D92D20">
                       {item?.amount}
                     </Typography>
                   </Box>
