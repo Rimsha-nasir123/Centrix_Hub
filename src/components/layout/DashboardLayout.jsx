@@ -35,7 +35,9 @@ export const DashboardLayout = ({ children }) => {
   ];
   return (
     <Box sx={{ display: "flex", height: "100vh", m: 0, p: 0 }}>
-      <Sidebar listItems={listItems} activeNav={1}/>
+      <Box sx={{ width: 280,}}>
+        <Sidebar listItems={listItems} activeNav={1} />
+      </Box>
       <Box
         component="main"
         sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}

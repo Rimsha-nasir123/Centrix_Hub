@@ -83,20 +83,27 @@ const ProjectsReport = () => {
         alignItems="center"
         mb={2}
       >
-        <Typography variant="h5" component="h2">
+        <Typography
+          variant="h5"
+          component="h2"
+          sx={{ fontWeight: 600, fontSize: 16 }}
+        >
           Projects report
         </Typography>
         <Button
           variant="contained"
           disableElevation
           sx={{
-            bgcolor: "#0F7D82",
+            bgcolor: "transparent",
             borderRadius: 2,
-            color: "#fff",
+            color: "#344054",
             textTransform: "none",
+            fontWeight: 600,
+            fontSize: 14,
+            border: "1px solid #D0D5DD",
           }}
         >
-          View All
+          View
         </Button>
       </Box>
 

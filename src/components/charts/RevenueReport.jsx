@@ -35,7 +35,7 @@ const data = [
   { month: "Dec", line1: 320, line2: 520, line3: 880 },
 ];
 
-const RevenueReport = () => {
+const RevenueReport = ({ profile }) => {
   const [activeFilter, setActiveFilter] = useState("12 months");
   const handleFilterChange = (filter) => {
     setActiveFilter(filter);
@@ -43,41 +43,64 @@ const RevenueReport = () => {
   };
 
   return (
-    <Box sx={{ p: 3, borderRadius: 2, mt: 2, border: "1px solid #E0E0E0" }}>
+    <Box
+      sx={{
+        p: 3,
+        borderRadius: 2,
+        mt: 2,
+        border: "1px solid #E0E0E0",
+        bgcolor: "#fffff",
+      }}
+    >
       <Box
         display="flex"
         justifyContent="space-between"
         alignItems="center"
         mb={2}
+        backgroundColor={"#FFFFFF"}
       >
         <Box>
-          <Typography variant="h5" component="h2" gutterBottom>
+          <Typography
+            variant="h5"
+            component="h2"
+            gutterBottom
+            sx={{ fontWeight: 600, fontSize: 16 }}
+          >
             Revenue report
           </Typography>
-          <Typography variant="body2">
-            Track task completion trends and performance over time.
-          </Typography>
+          {profile && (
+            <Typography
+              variant="body2"
+              sx={{ fontSize: 14, fontWeight: 400, color: "#475467" }}
+            >
+              Track task completion trends and performance over time.
+            </Typography>
+          )}
         </Box>
         <Button
           variant="contained"
           disableElevation
           sx={{
-            bgcolor: "#0F7D82",
+            bgcolor: profile ? "#0F7D82" : "transparent",
             borderRadius: 2,
-            color: "#fff",
+            color: profile ? "#fff" : "#344054",
             textTransform: "none",
+            fontWeight: 600,
+            fontSize: 14,
+            border: profile ? "#0F7D82" : "1px solid #D0D5DD",
           }}
         >
-          View All
+          {profile ? "View All" : "View"}
         </Button>
       </Box>
 
       <Box
         sx={{ mb: 3 }}
-        // bgcolor={"#F9FAFB"}
-        p={1}
+        bgcolor={profile ? "#F9FAFB" : "FFFFFF"}
+        p={0.5}
         borderRadius={2}
-        borderColor={"#E0E0E0"}
+        spacing={1}
+        borderColor={profile ? "#E0E0E0" : "transparent"}
       >
         {["12 months", "3 months", "30 days", "7 days", "24 hours"].map(
           (filter) => (
@@ -85,6 +108,24 @@ const RevenueReport = () => {
               key={filter}
               active={activeFilter === filter ? 1 : 0}
               onClick={() => handleFilterChange(filter)}
+              sx={{
+                bgcolor:
+                  activeFilter === filter
+                    ? !profile
+                      ? "#F9FAFB"
+                      : "#FFFFFF"
+                    : "transparent",
+                borderColor:
+                  activeFilter === filter
+                    ? !profile
+                      ? "#F9FAFB"
+                      : "#FFFFFF"
+                    : "transparent",
+                width: 98,
+                fontWeight: 600,
+                fontSize: 14,
+                letterSpacing: 0,
+              }}
             >
               {filter}
             </TimeFilterButton>

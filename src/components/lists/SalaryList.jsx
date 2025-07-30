@@ -66,7 +66,7 @@ const SalaryStatementList = () => {
                     Net Pay
                   </Typography>
                 </Grid>
-                <Box display="flex" justifyContent={"center"} gap={1}>
+                <Box display="flex" justifyContent={"center"} alignItems={"center"} gap={1}>
                   <Box
                     sx={{
                       bgcolor: "#ECFDF3",

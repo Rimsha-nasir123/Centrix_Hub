@@ -13,7 +13,7 @@ export const Header = () => {
             fontWeight: 600,
             fontSize: 14,
             textTransform: "none",
-            
+
             borderRadius: 2,
           }}
         >
@@ -25,6 +25,7 @@ export const Header = () => {
               textTransform: "none",
               border: "1px solid #E0E0E0",
               borderRadius: 2,
+              bgcolor: "#F9FAFB",
             }}
           >
             <span

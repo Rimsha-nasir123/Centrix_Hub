@@ -107,7 +107,7 @@ const Dashboard = () => {
             </Box>
             <RevenueCard />
           </Box>
-          <RevenueReport />
+          <RevenueReport profile={false}/>
           <ProjectsReport />
         </Box>
 

@@ -16,7 +16,7 @@ const ProfilePage = () => {
           <ProfileHeader />
           <StatsCards />
           <SalaryStatementList />
-          <RevenueReport />
+          <RevenueReport profile={true}/>
         </Box>
       </Box>
     </ProfileLayout>
