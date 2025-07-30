@@ -11,7 +11,7 @@ const ProfileHeader = () => {
       justifyContent="space-between"
       alignItems="center"
       flexWrap="wrap"
-      sx={{ border: 1, borderColor: "#E0E0E0", p: 2, borderRadius: 3, mb: 2 }}
+      sx={{ border: 1, borderColor: "#E0E0E0", p: 2, borderRadius: 3, mb: 2, bgcolor: "#FFFFFF" }}
     >
       <Box display="flex" alignItems="center" gap={2}>
         <Avatar src="/dp.png" sx={{ width: 160, height: 160 }} />

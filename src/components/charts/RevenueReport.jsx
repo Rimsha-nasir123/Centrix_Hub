@@ -49,7 +49,7 @@ const RevenueReport = ({ profile }) => {
         borderRadius: 2,
         mt: 2,
         border: "1px solid #E0E0E0",
-        bgcolor: "#fffff",
+        bgcolor: "#FFFFFF",
       }}
     >
       <Box
@@ -57,7 +57,6 @@ const RevenueReport = ({ profile }) => {
         justifyContent="space-between"
         alignItems="center"
         mb={2}
-        backgroundColor={"#FFFFFF"}
       >
         <Box>
           <Typography
